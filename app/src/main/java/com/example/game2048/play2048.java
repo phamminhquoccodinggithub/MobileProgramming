@@ -5,9 +5,13 @@ import android.app.*;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.Paint;
 import  android.view.*;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,10 +31,15 @@ public class play2048 extends Activity {
     private TextView text41, text42, text43, text44;
     private LinearLayout khungman;
     private int scores=0;
-    Button quaylai, reset;
+    Button quaylai, reset, soundmute;
     private int matrix [][], luumatrix[][];
     private TextView diemso, diemcao;
     private Database database;
+
+    private Bitmap bitmap;
+    private Resources resources;
+    private Paint paint;
+
     @Override
     public void onStop() {
         LuuQuatrinh();
@@ -155,6 +164,7 @@ public class play2048 extends Activity {
         diemso = (TextView) findViewById(R.id.diemso);
         diemcao = (TextView) findViewById(R.id.diemcao);
         khungman = (LinearLayout) findViewById(R.id.khungchoi);
+
         box11 = (ImageView) findViewById(R.id.box11);
         box12 = (ImageView) findViewById(R.id.box12);
         box13 = (ImageView) findViewById(R.id.box13);
@@ -200,6 +210,7 @@ public class play2048 extends Activity {
 
         quaylai = (Button) findViewById(R.id.quaylai);
         reset = (Button)findViewById(R.id.reset);
+        soundmute = (Button) findViewById(R.id.mute);
     }
     public void trove1buoc()
     {
