@@ -8,11 +8,11 @@
     android:background="@color/colorPrimary"
     android:gravity="center"
     tools:context=".MainActivity">
-    <ImageView
-        android:layout_marginBottom="30dp"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/menugamehaikhongbontam"/>
+
+    <com.example.game2048.CustomView
+        android:layout_width="900px"
+        android:layout_height="450px"
+        />
     <Button
         android:textSize="18dp"
         android:textColor="#ddd"

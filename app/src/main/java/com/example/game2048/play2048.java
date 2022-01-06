@@ -1,8 +1,6 @@
 package com.example.game2048;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.*;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -11,7 +9,6 @@ import android.graphics.Paint;
 import  android.view.*;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -56,6 +53,7 @@ public class play2048 extends Activity {
                         LuuQuatrinh();
                         Intent startMain = new Intent(play2048.this, MainActivity.class);
                         startMain.addCategory(Intent.CATEGORY_HOME);
+                        stopService(startMain);
                         startActivity(startMain);
                         finish();
                     }
@@ -85,7 +83,7 @@ public class play2048 extends Activity {
         }catch (Exception e){
             khoitao();
         }
-        final GestureDetector gestureDetector = new GestureDetector(this, new CuChiManHinh());
+        final GestureDetector gestureDetector = new GestureDetector(this, new Gesture());
         khungman.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -210,7 +208,7 @@ public class play2048 extends Activity {
 
         quaylai = (Button) findViewById(R.id.quaylai);
         reset = (Button)findViewById(R.id.reset);
-        soundmute = (Button) findViewById(R.id.mute);
+//        soundmute = (Button) findViewById(R.id.mute);
     }
     public void trove1buoc()
     {
@@ -336,7 +334,7 @@ public class play2048 extends Activity {
         return 0;
     }
 
-    class CuChiManHinh  extends GestureDetector.SimpleOnGestureListener {
+    class Gesture extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             boolean check = false;

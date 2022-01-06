@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
     private Button playgame, choitiep;
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -55,7 +55,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, play2048.class);
                 intent.putExtra("playgame", 1);
+                startService(intent);
                 startActivity(intent);
+
             }
         });
         choitiep.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +65,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, play2048.class);
                 intent.putExtra("playgame", 3);
+                startService(intent);
                 startActivity(intent);
+
             }
         });
     }

@@ -38,7 +38,7 @@ public class Database extends SQLiteOpenHelper {
     }
     public String getDiemcao2048(Context context)
     {
-        Cursor cursor = new Database(context).getData("SELECT *FROM Game2048");
+        Cursor cursor = new Database(context).getData("SELECT * FROM Game2048");
         cursor.move(1);
         return cursor.getString(5);
     }
@@ -50,7 +50,7 @@ public class Database extends SQLiteOpenHelper {
     }
     public String getDiemHT2048(Context context)
     {
-        Cursor cursor = new Database(context).getData("SELECT *FROM Game2048");
+        Cursor cursor = new Database(context).getData("SELECT * FROM Game2048");
         cursor.move(2);
         return cursor.getString(5);
     }
