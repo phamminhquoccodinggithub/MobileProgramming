@@ -55,7 +55,7 @@ public class MainActivity extends Activity{
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, play2048.class);
                 intent.putExtra("playgame", 1);
-                startService(intent);
+                startService(new Intent(MainActivity.this, MyService.class));
                 startActivity(intent);
 
             }
@@ -65,7 +65,7 @@ public class MainActivity extends Activity{
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, play2048.class);
                 intent.putExtra("playgame", 3);
-                startService(intent);
+                startService(new Intent(MainActivity.this, MyService.class));
                 startActivity(intent);
 
             }

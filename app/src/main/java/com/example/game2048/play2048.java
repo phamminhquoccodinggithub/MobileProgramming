@@ -53,8 +53,8 @@ public class play2048 extends Activity {
                         LuuQuatrinh();
                         Intent startMain = new Intent(play2048.this, MainActivity.class);
                         startMain.addCategory(Intent.CATEGORY_HOME);
-                        stopService(startMain);
                         startActivity(startMain);
+                        stopService(new Intent(play2048.this, MyService.class));
                         finish();
                     }
                 })
