@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import  android.view.*;
 import android.os.Bundle;
 import android.widget.Button;
@@ -32,10 +33,8 @@ public class play2048 extends Activity {
     private int matrix [][], luumatrix[][];
     private TextView diemso, diemcao;
     private Database database;
+    boolean sm=true;
 
-    private Bitmap bitmap;
-    private Resources resources;
-    private Paint paint;
 
     @Override
     public void onStop() {
@@ -103,6 +102,24 @@ public class play2048 extends Activity {
                 RESETGAME();
             }
         });
+        soundmute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeSoundMute();
+            }
+        });
+    }
+    public void changeSoundMute(){
+        if (sm==true){
+            soundmute.setBackgroundResource(R.drawable.icons8_mute_50px_4);
+            sm=false;
+            stopService(new Intent(play2048.this, MyService.class));
+        }else {
+            soundmute.setBackgroundResource(R.drawable.sound2);
+            sm=true;
+            onResume();
+            startService(new Intent(play2048.this, MyService.class));
+        }
     }
     public void LuuQuatrinh()
     {
@@ -208,7 +225,7 @@ public class play2048 extends Activity {
 
         quaylai = (Button) findViewById(R.id.quaylai);
         reset = (Button)findViewById(R.id.reset);
-//        soundmute = (Button) findViewById(R.id.mute);
+        soundmute = (Button) findViewById(R.id.mute);
     }
     public void trove1buoc()
     {

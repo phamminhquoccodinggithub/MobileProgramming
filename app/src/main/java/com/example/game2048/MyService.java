@@ -25,12 +25,13 @@ public class MyService extends Service {
 
     @Override
      public void onStart(Intent intent, int startid) {
-        Toast.makeText(this, "Music Started", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Music Started", Toast.LENGTH_SHORT).show();
         myPlayer.start();
     }
+
     @Override
      public void onDestroy() {
-        Toast.makeText(this, "Music Stopped", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Music Stopped", Toast.LENGTH_SHORT).show();
         myPlayer.stop();
     }
 
