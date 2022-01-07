@@ -26,6 +26,7 @@ public class MainActivity extends Activity{
                         startMain.addCategory(Intent.CATEGORY_HOME);
                         startActivity(startMain);
                         finish();
+                        System.exit(0);
                     }
                 })
                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -75,5 +76,10 @@ public class MainActivity extends Activity{
     {
         playgame = (Button)findViewById(R.id.playgame2048);
         choitiep = (Button)findViewById(R.id.choitiep);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
