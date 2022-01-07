@@ -3,7 +3,6 @@ package com.example.game2048;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.IBinder;
 import android.widget.Toast;
 
@@ -40,7 +39,7 @@ public class MyService extends Service {
     }
     private int getRandomMusic(int x){
         Random random = new Random();
-        x = random.nextInt(8-0+1)+0;
+        x = random.nextInt(9-0+1);
         switch (x){
             case 0:
                 return R.raw.duongtoichoemve;
@@ -57,6 +56,7 @@ public class MyService extends Service {
             case 6: return R.raw.thithoi;
             case 7: return R.raw.didetroive;
             case 8: return R.raw.phidieuvesau;
+            case 9: return R.raw.elseparis;
         }
         return x;
     }

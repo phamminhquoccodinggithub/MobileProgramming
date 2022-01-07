@@ -32,4 +32,5 @@
         android:background="@drawable/backgroungbuttonmenu"
         android:text="NEW GAME"/>
 
+
 </LinearLayout>
