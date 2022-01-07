@@ -333,20 +333,20 @@ public class play2048 extends Activity {
     }
     public int getBackground(int n)
     {
-        if(n==0) return R.drawable.box0;
+        if(n==0) return R.drawable.boxscores;
         switch (n%2048)
         {
-            case 2: return R.drawable.box2;
-            case 4: return R.drawable.box4;
-            case 8: return R.drawable.box8;
-            case 16: return R.drawable.box16;
-            case 32: return R.drawable.box32;
-            case 64: return R.drawable.box64;
-            case 128: return R.drawable.box128;
-            case 256: return R.drawable.box256;
-            case 512: return R.drawable.box512;
-            case 1024: return R.drawable.box1024;
-            case 0: return R.drawable.box2048;
+            case 2: return R.drawable.box1024;
+            case 4: return R.drawable.box256;
+            case 8: return R.drawable.cell_rectangle_8;
+            case 16: return R.drawable.cell_rectangle_16;
+            case 32: return R.drawable.cell_rectangle_32;
+            case 64: return R.drawable.cell_rectangle_64;
+            case 128: return R.drawable.cell_rectangle_128;
+            case 256: return R.drawable.cell_rectangle_256;
+            case 512: return R.drawable.cell_rectangle_512;
+            case 1024: return R.drawable.cell_rectangle_1024;
+            case 2048: return R.drawable.cell_rectangle_2048;
         }
         return 0;
     }
@@ -555,8 +555,8 @@ public class play2048 extends Activity {
             if(Integer.valueOf(database.getDiemcao2048(this)) < scores){
                 database.setDiemcao2048(scores);
             }
-            database.close();
-            database = new Database(this);
+//            database.close();
+//            database = new Database(this);
             diemcao.setText("Best "+database.getDiemcao2048(this));
             database.close();
             menu.setOnClickListener(new View.OnClickListener() {
