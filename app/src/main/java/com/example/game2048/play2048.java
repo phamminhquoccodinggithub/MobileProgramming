@@ -117,7 +117,6 @@ public class play2048 extends Activity {
         }else {
             soundmute.setBackgroundResource(R.drawable.sound2);
             sm=true;
-            onResume();
             startService(new Intent(play2048.this, MyService.class));
         }
     }
