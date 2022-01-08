@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:gravity="center"
@@ -9,12 +8,14 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".play2048">
+
     <LinearLayout
         android:paddingTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:weightSum="10"
         android:layout_weight="30">
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_weight="4"
@@ -40,12 +41,14 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/sound2"></Button>
         </RelativeLayout>
+
         <LinearLayout
             android:padding="10dp"
             android:layout_width="0dp"
             android:layout_weight="6"
             android:orientation="vertical"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,29 +61,33 @@
                     android:orientation="vertical"
                     android:weightSum="2"
                     android:background="@drawable/box2">
+
                     <LinearLayout
                         android:gravity="center|bottom"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
+
                         <TextView
                             android:textColor="#ccc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Score"/>
+                            android:text="Score" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:gravity="center|top"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
+
                         <TextView
                             android:id="@+id/diemso"
                             android:textColor="#fff"
                             android:textSize="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:text="0" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -93,37 +100,43 @@
                     android:orientation="vertical"
                     android:weightSum="2"
                     android:background="@drawable/box2">
+
                     <LinearLayout
                         android:gravity="center|bottom"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
+
                         <TextView
                             android:textColor="#ccc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Highest"/>
+                            android:text="Highest" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:gravity="center|top"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
+
                         <TextView
                             android:id="@+id/diemcao"
                             android:textColor="#fff"
                             android:textSize="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2115"/>
+                            android:text="2115" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_marginRight="4dp"
                 android:gravity="right"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <RelativeLayout
                     android:padding="5dp"
                     android:layout_marginRight="15dp"
@@ -138,11 +151,13 @@
                         android:layout_gravity="left"
                         android:background="@drawable/quaylai1" />
                 </RelativeLayout>
+
                 <LinearLayout
                     android:padding="5dp"
                     android:background="@drawable/cell_rectangle_8192"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <Button
                         android:id="@+id/reset"
                         android:background="@drawable/reset"
@@ -164,21 +179,24 @@
         android:orientation="vertical"
         android:weightSum="4"
         android:layout_weight="50">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:weightSum="4"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box2"/>
+                    android:src="@drawable/box2" />
 
                 <TextView
                     android:id="@+id/text11"
@@ -190,16 +208,19 @@
                     android:textSize="35dp"
                     android:textStyle="bold" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box4"/>
+                    android:src="@drawable/box4" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="4"
@@ -208,18 +229,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box13"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box8"/>
+                    android:src="@drawable/box8" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text13"
@@ -228,18 +252,21 @@
                     android:gravity="center"
                     android:text="8"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box14"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box16"/>
+                    android:src="@drawable/box16" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="16"
@@ -248,7 +275,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -257,16 +284,18 @@
             android:layout_height="0dp"
             android:weightSum="4"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box21"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box32"/>
+                    android:src="@drawable/box32" />
 
                 <TextView
                     android:id="@+id/text21"
@@ -278,16 +307,19 @@
                     android:textSize="35dp"
                     android:textStyle="bold" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box22"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box0"/>
+                    android:src="@drawable/box0" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text22"
@@ -295,18 +327,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box23"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box64"/>
+                    android:src="@drawable/box64" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="64"
@@ -315,18 +350,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box24"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box128"/>
+                    android:src="@drawable/box128" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="128"
@@ -335,7 +373,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -344,16 +382,18 @@
             android:layout_height="0dp"
             android:weightSum="4"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box31"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box256"/>
+                    android:src="@drawable/box256" />
 
                 <TextView
                     android:id="@+id/text31"
@@ -365,16 +405,19 @@
                     android:textSize="35dp"
                     android:textStyle="bold" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box32"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box512"/>
+                    android:src="@drawable/box512" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="512"
@@ -383,18 +426,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box33"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box1024"/>
+                    android:src="@drawable/box1024" />
+
                 <TextView
                     android:textStyle="bold"
                     android:text="1024"
@@ -403,18 +449,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box34"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box2048"/>
+                    android:src="@drawable/box2048" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text34"
@@ -422,7 +471,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -431,16 +480,19 @@
             android:layout_height="0dp"
             android:weightSum="4"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box41"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box0"/>
+                    android:src="@drawable/box0" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text41"
@@ -448,18 +500,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box42"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box0"/>
+                    android:src="@drawable/box0" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text42"
@@ -467,18 +522,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box43"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box0"/>
+                    android:src="@drawable/box0" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text43"
@@ -486,18 +544,21 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_margin="3dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/box44"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/box0"/>
+                    android:src="@drawable/box0" />
+
                 <TextView
                     android:textStyle="bold"
                     android:id="@+id/text44"
@@ -505,7 +566,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textSize="35dp"/>
+                    android:textSize="35dp" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

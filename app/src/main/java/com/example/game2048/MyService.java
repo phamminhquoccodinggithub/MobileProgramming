@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -13,6 +12,7 @@ import java.util.Random;
 public class MyService extends Service {
     MediaPlayer myPlayer;
     int selectSong;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -27,21 +27,28 @@ public class MyService extends Service {
     }
 
     @Override
-     public void onStart(Intent intent, int startid) {
+    public void onStart(Intent intent, int startid) {
 //        Toast.makeText(this, "Music Started", Toast.LENGTH_SHORT).show();
         myPlayer.start();
     }
 
     @Override
-     public void onDestroy() {
+    public void onDestroy() {
 //        Toast.makeText(this, "Music Stopped", Toast.LENGTH_SHORT).show();
         myPlayer.stop();
     }
-    private int getRandomMusic(int x){
+
+    private int getRandomMusic(int x) {
         Random random = new Random();
+<<<<<<< HEAD
         x = random.nextInt(10-0+1)+0;
 
         switch (x){
+=======
+        x = random.nextInt(10 - 0 + 1) + 0;
+
+        switch (x) {
+>>>>>>> 73d5dcb34d3dff46987b9ead9e5037faa1e39338
             case 0:
                 return R.raw.duongtoichoemve;
             case 1:
@@ -54,11 +61,16 @@ public class MyService extends Service {
                 return R.raw.batnhaclen;
             case 5:
                 return R.raw.gapnguoidungluc;
-            case 6: return R.raw.thithoi;
-            case 7: return R.raw.didetroive;
-            case 8: return R.raw.phidieuvesau;
-            case 9: return R.raw.elseparis;
-            case 10: return R.raw.dungnguoi;
+            case 6:
+                return R.raw.thithoi;
+            case 7:
+                return R.raw.didetroive;
+            case 8:
+                return R.raw.phidieuvesau;
+            case 9:
+                return R.raw.tramcamcut;
+            case 10:
+                return R.raw.dungnguoi;
         }
         return x;
     }
