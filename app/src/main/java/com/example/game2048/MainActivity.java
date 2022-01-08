@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         batxukienclick();
         batteryCheck();
 
+
     }
 
     public void batteryCheck() {
@@ -70,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_BATTERY_LOW);
         registerReceiver(receiver, intentFilter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
     }
 
     public void batxukienclick() {
@@ -120,12 +127,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onStop() {
 
-        super.onStop();
-        unregisterReceiver(receiver);
-    }
 
     public void anhxa() {
         playgame = (Button) findViewById(R.id.playgame2048);

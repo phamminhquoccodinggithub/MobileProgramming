@@ -115,6 +115,7 @@ public class play2048 extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        stopService(new Intent(play2048.this, MyService.class));
     }
 
     public void changeSoundMute() {
