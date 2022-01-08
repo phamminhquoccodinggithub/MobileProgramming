@@ -2,12 +2,17 @@ package com.example.game2048;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 
 import android.app.*;
 import android.content.Intent;
+import android.util.Log;
 import android.view.*;
 import android.os.Bundle;
 import android.widget.Button;
@@ -31,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(startMain);
                         sendNotification();
                         finish();
-//                        System.exit(0);
+//                      System.exit(0);
                     }
                 })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -55,8 +60,15 @@ public class MainActivity extends AppCompatActivity {
         createNotificationChannel();
         anhxa();
         batxukienclick();
-    }
+        batteryCheck();
 
+    }
+    public void batteryCheck() {
+        BroadcastReceiver receiver = new BatteryBroadcast();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_BATTERY_LOW);
+        registerReceiver(receiver, intentFilter);
+    }
 
     public void batxukienclick() {
         playgame.setOnClickListener(new View.OnClickListener() {

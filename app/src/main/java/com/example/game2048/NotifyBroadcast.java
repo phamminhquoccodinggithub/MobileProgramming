@@ -1,11 +1,14 @@
 package com.example.game2048;
 
 
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -23,7 +26,7 @@ public class NotifyBroadcast extends BroadcastReceiver {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(context, "Channel_Notify")
                 .setSmallIcon(R.mipmap.ic_launcher_foreground)
                 .setContentTitle("COME AND PLAY 2048")
-                .setContentText("Don't forget to take attendance every day!")
+                .setContentText("2048 is waiting for you!")
                 .setColor(Color.parseColor("#FFE400"))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 //Set the intent that will fire when the user taps the notification
@@ -32,4 +35,5 @@ public class NotifyBroadcast extends BroadcastReceiver {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify(NOTIFICATION_ID, notification.build());
     }
+
 }
