@@ -24,23 +24,18 @@
 
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        
-        <receiver android:name=".NotifyBroadcast"/>
+
+        <receiver android:name=".NotifyBroadcast" />
 
         <receiver android:name=".BatteryBroadcast">
             <intent-filter>
-                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_LOW" />
             </intent-filter>
         </receiver>
-        <service android:name=".MyService"/>
-=======
-
-        <receiver android:name=".NotifyBroadcast" />
-        <receiver android:name=".BatteryBroadcast" />
 
         <service android:name=".MyService" />
->>>>>>> 73d5dcb34d3dff46987b9ead9e5037faa1e39338
+
+
     </application>
 
 </manifest>

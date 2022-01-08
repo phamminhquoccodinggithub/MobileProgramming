@@ -40,15 +40,9 @@ public class MyService extends Service {
 
     private int getRandomMusic(int x) {
         Random random = new Random();
-<<<<<<< HEAD
-        x = random.nextInt(10-0+1)+0;
-
-        switch (x){
-=======
         x = random.nextInt(10 - 0 + 1) + 0;
 
         switch (x) {
->>>>>>> 73d5dcb34d3dff46987b9ead9e5037faa1e39338
             case 0:
                 return R.raw.duongtoichoemve;
             case 1:
