@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void anhxa() {
         playgame = (Button) findViewById(R.id.playgame2048);
         choitiep = (Button) findViewById(R.id.choitiep);
