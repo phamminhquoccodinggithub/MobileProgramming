@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".play2048"
-            android:screenOrientation="portrait" ></activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".play2048"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +24,11 @@
 
             </intent-filter>
         </activity>
-        <receiver android:name=".NotifyBroadcast"/>
-        <receiver android:name=".BatteryBroadcast"/>
-        <service android:name=".MyService"/>
+
+        <receiver android:name=".NotifyBroadcast" />
+        <receiver android:name=".BatteryBroadcast" />
+
+        <service android:name=".MyService" />
     </application>
 
 </manifest>

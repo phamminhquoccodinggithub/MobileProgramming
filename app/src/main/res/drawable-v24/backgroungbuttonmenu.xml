@@ -4,29 +4,24 @@
     tools:ignore="MissingDefaultResource">
     <item tools:ignore="ExtraText">
         <shape android:shape="rectangle">
-            <solid android:color="#789"/>
-            <corners android:radius="0dp"
-                android:bottomLeftRadius="2dp"
-                android:bottomRightRadius="2dp"/>
+            <solid android:color="#789" />
             <corners
-                android:radius="50dp" >
-            </corners>
+                android:radius="0dp"
+                android:bottomLeftRadius="2dp"
+                android:bottomRightRadius="2dp" />
+            <corners android:radius="50dp"></corners>
         </shape>
     </item>
-    <item
-        android:bottom="1dp">
+    <item android:bottom="1dp">
         <shape android:shape="rectangle">
             <corners
 
                 android:bottomLeftRadius="2dp"
-                android:bottomRightRadius="2dp"
-                />
+                android:bottomRightRadius="2dp" />
             <gradient
                 android:endColor="#235"
                 android:startColor="#f25" />
-            <corners
-                android:radius="50dp" >
-            </corners>
+            <corners android:radius="50dp"></corners>
         </shape>
     </item>
 </layer-list>
