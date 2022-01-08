@@ -39,7 +39,7 @@ public class MyService extends Service {
     }
     private int getRandomMusic(int x){
         Random random = new Random();
-        x = random.nextInt(9-0+1);
+        x = random.nextInt(9-0+1)+0;
         switch (x){
             case 0:
                 return R.raw.duongtoichoemve;
