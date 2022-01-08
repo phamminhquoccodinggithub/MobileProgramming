@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button playgame, choitiep;
+    private BatteryBroadcast receiver;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void batteryCheck() {
-        BroadcastReceiver receiver = new BatteryBroadcast();
+        receiver = new BatteryBroadcast();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_BATTERY_LOW);
         registerReceiver(receiver, intentFilter);
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick + tenSecondsInMillis, pendingIntent);
     }
 
+
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = getString(R.string.channel_name);
@@ -115,6 +117,13 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
+    }
+
+    @Override
+    protected void onStop() {
+
+        super.onStop();
+        unregisterReceiver(receiver);
     }
 
     public void anhxa() {

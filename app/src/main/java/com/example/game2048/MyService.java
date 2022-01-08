@@ -39,11 +39,8 @@ public class MyService extends Service {
     }
     private int getRandomMusic(int x){
         Random random = new Random();
-<<<<<<< HEAD
         x = random.nextInt(10-0+1)+0;
-=======
-        x = random.nextInt(9-0+1)+0;
->>>>>>> 68c53d98eae748e9b960549e2107e19585afd1d6
+
         switch (x){
             case 0:
                 return R.raw.duongtoichoemve;
