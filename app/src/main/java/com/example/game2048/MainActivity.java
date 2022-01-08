@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(startMain);
                         sendNotification();
                         finish();
+                        System.exit(0);
                     }
                 })
                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -113,5 +114,12 @@ public class MainActivity extends AppCompatActivity {
         choitiep = (Button)findViewById(R.id.choitiep);
     }
 
+<<<<<<< HEAD
 
+=======
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+>>>>>>> d6fcee0de260582be1816d0e58c24cef83a4fb14
 }

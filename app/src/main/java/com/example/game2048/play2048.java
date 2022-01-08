@@ -9,6 +9,8 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import  android.view.*;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -109,6 +111,12 @@ public class play2048 extends Activity {
             }
         });
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     public void changeSoundMute(){
         if (sm==true){
             soundmute.setBackgroundResource(R.drawable.icons8_mute_50px_4);

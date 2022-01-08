@@ -18,22 +18,22 @@ public class CustomView extends View {
     private Paint paint;
     private Resources resources;
     private Bitmap bitmap;
-    //su dung khi add view luc runtime
+    //Add view runtime
     public CustomView(Context context){
         super(context);
         init(context, null, 0);
     }
-    // su dung khi khai bao trong file xml
+    //Use in xml file
     public CustomView(Context context, @Nullable AttributeSet attrs){
         super(context, attrs);
         init(context, attrs, 0);
     }
-    // dung trong xml them style mac dinh
+    //Use in xml file, add default style
     public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr){
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
-    //them tham so de truyen style thong qua resources
+    //Use in xml file, add default style, add style by resources
     public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes){
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);

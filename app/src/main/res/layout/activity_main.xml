@@ -21,7 +21,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:background="@drawable/backgroungbuttonmenu"
-        android:text="Continue"/>
+        android:text="CONTINUE"/>
     <Button
         android:textSize="18dp"
         android:textColor="#ddd"
